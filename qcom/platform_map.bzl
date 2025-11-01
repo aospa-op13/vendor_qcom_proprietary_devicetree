@@ -125,7 +125,6 @@ _platform_map = {
             {"name": "sunp-hdk-overlay.dtbo"},
             {"name": "sun-rumi-overlay.dtbo"},
         ],
-        "binary_compatible_with": ["tuna", "kera"],
     },
     "qcs610": {
         "dtb_list": [
@@ -169,8 +168,21 @@ _platform_map = {
     "kera": {
         "dtb_list": [
             {"name": "kera.dtb"},
+            {"name": "kera-iot.dtb"},
             {
                 "name": "kerap.dtb",
+                "apq": True,
+            },
+            {
+                "name": "kerap-iot.dtb",
+                "apq": True,
+            },
+            {
+                "name": "kera-qmb.dtb",
+                "apq": False,
+            },
+            {
+                "name": "kerap-qna.dtb",
                 "apq": True,
             },
         ],
@@ -191,6 +203,7 @@ _platform_map = {
             {"name": "kera-cdp-qca6750-ufs4-overlay.dtbo"},
             {"name": "kera-iot-cdp-qca6750-ufs4-overlay.dtbo"},
             {"name": "kera-cdp-qca6750-ufs4-slt-overlay.dtbo"},
+            {"name": "kera-cdp-emmc-overlay.dtbo"},
             {"name": "kera-qrd-wcn7750-ufs4-overlay.dtbo"},
             {"name": "kera-qrd-wcn7750-ufs2-overlay.dtbo"},
             {"name": "kera-qrd-wcn7750-ufs3-overlay.dtbo"},
@@ -201,6 +214,8 @@ _platform_map = {
             {"name": "kera-rcm-wcn7750-ufs2-overlay.dtbo"},
             {"name": "kera-rcm-wcn7750-ufs3-overlay.dtbo"},
             {"name": "kera-rcm-wcn7750-ufs4-overlay.dtbo"},
+            {"name": "kera-idp-emmc-overlay.dtbo"},
+            {"name": "kera-idp-ufs3-overlay.dtbo"},
         ],
     },
     "kera-le": {
@@ -228,6 +243,7 @@ _platform_map = {
             {"name": "kera-cdp-qca6750-ufs4-overlay.dtbo"},
             {"name": "kera-iot-cdp-qca6750-ufs4-overlay.dtbo"},
             {"name": "kera-cdp-qca6750-ufs4-slt-overlay.dtbo"},
+            {"name": "kera-cdp-emmc-overlay.dtbo"},
             {"name": "kera-qrd-wcn7750-ufs4-overlay.dtbo"},
             {"name": "kera-qrd-wcn7750-ufs2-overlay.dtbo"},
             {"name": "kera-qrd-wcn7750-ufs3-overlay.dtbo"},
@@ -238,6 +254,8 @@ _platform_map = {
             {"name": "kera-rcm-wcn7750-ufs2-overlay.dtbo"},
             {"name": "kera-rcm-wcn7750-ufs3-overlay.dtbo"},
             {"name": "kera-rcm-wcn7750-ufs4-overlay.dtbo"},
+            {"name": "kera-idp-emmc-overlay.dtbo"},
+            {"name": "kera-idp-ufs3-overlay.dtbo"},
         ],
     },
     "parrot-tuivm": {
@@ -258,6 +276,8 @@ _platform_map = {
             {"name": "ravelin-vm-idp-wcn3988.dtb"},
             {"name": "ravelin-vm-idp-wcn3950-amoled-rcm.dtb"},
             {"name": "ravelin-vm-qrd.dtb"},
+            {"name": "montague-vm-hsp.dtb"},
+            {"name": "montague-vm-moselle.dtb"},
         ],
     },
     "sun-tuivm": {
@@ -475,12 +495,17 @@ _platform_map = {
             {"name": "parrot-sg.dtb"},
             {"name": "parrotp-sg.dtb"},
             {"name": "parrot-4gb.dtb"},
+            {"name": "parrot-lite.dtb"},
             {"name": "ravelin.dtb"},
             {"name": "ravelinp.dtb"},
             {"name": "ravelin-4gb.dtb"},
             {"name": "ravelinp-4gb.dtb"},
             {"name": "ravelin-sg.dtb"},
             {"name": "ravelinp-sg.dtb"},
+            {"name": "montague.dtb"},
+            {"name": "montaguep.dtb"},
+            {"name": "montague-4gb.dtb"},
+            {"name": "montaguep-4gb.dtb"},
         ],
         "dtbo_list": [
             # keep sorted
@@ -516,6 +541,15 @@ _platform_map = {
             {"name": "ravelin-qrd-overlay.dtbo"},
             {"name": "ravelin-idp-wcn3988-4gb-overlay.dtbo"},
             {"name": "ravelin-qrd-4gb-overlay.dtbo"},
+            {"name": "montague-rumi-overlay.dtbo"},
+            {"name": "montague-hsp-overlay.dtbo"},
+            {"name": "montague-rcm-overlay.dtbo"},
+            {"name": "montague-wsa-overlay.dtbo"},
+            {"name": "montague-wsd-overlay.dtbo"},
+            {"name": "montague-idp-qps615-overlay.dtbo"},
+            {"name": "montague-adrastea-overlay.dtbo"},
+            {"name": "montague-apache-overlay.dtbo"},
+            {"name": "montague-moselle-overlay.dtbo"},
         ],
     },
 }

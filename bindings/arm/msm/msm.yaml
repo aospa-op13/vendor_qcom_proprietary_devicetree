@@ -119,6 +119,28 @@ properties:
               - qcom,qrd
           - const: qcom,ravelinp
 
+      - description: Qualcomm Technologies, Inc. MONTAGUE
+        items:
+          - enum:
+              - qcom,montague-rumi
+              - qcom,rumi
+              - qcom,montague-idp
+              - qcom,idp
+              - qcom,montague-qrd
+              - qcom,qrd
+          - const: qcom,montague
+
+      - description: Qualcomm Technologies, Inc. MONTAGUEP
+        items:
+          - enum:
+              - qcom,montaguep-rumi
+              - qcom,rumi
+              - qcom,montaguep-idp
+              - qcom,idp
+              - qcom,montaguep-qrd
+              - qcom,qrd
+          - const: qcom,montaguep
+
       - description: Qualcomm Technologies, Inc. TUNA
         items:
           - enum:
@@ -164,6 +186,8 @@ properties:
               - qcom,mtp
               - qcom,kera-qrd
               - qcom,qrd
+              - qcom,kera-idp
+              - qcom,idp
               - qcom,kera-rcm
               - qcom,rcm
           - const: qcom,kera
@@ -179,9 +203,19 @@ properties:
               - qcom,mtp
               - qcom,kerap-qrd
               - qcom,qrd
+              - qcom,kerap-idp
+              - qcom,idp
               - qcom,kerap-rcm
               - qcom,rcm
           - const: qcom,kerap
+
+      - description: Qualcomm Technologies, Inc. KERA QMB
+        items:
+          - const: qcom,kera-qmb
+
+      - description: Qualcomm Technologies, Inc. KERAP QNA
+        items:
+          - const: qcom,kerap-qna
 
       - description: Qualcomm Technologies, Inc. MONACO
         items:

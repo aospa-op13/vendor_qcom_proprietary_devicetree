@@ -76,8 +76,8 @@ sun-dtb-$(CONFIG_ARCH_TUNA) +=  \
 sun-overlays-dtb-$(CONFIG_ARCH_TUNA) += $(TUNA_BOARDS) $(NOAPQ_TUNA_BOARDS) $(TUNA_BASE_DTB) $(TUNA_APQ_BASE_DTB)
 dtb-y += $(sun-dtb-y)
 
-KERA_BASE_DTB += kera.dtb
-KERA_APQ_BASE_DTB += kerap.dtb
+KERA_BASE_DTB += kera.dtb kera-iot.dtb kera-qmb.dtb
+KERA_APQ_BASE_DTB += kerap.dtb kerap-iot.dtb kerap-qna.dtb
 KERA_BOARDS += \
 		kera-atp-overlay.dtbo \
 		kera-mtp-qca6750-ufs4-overlay.dtbo \
@@ -91,6 +91,7 @@ KERA_BOARDS += \
 		kera-cdp-qca6750-ufs4-overlay.dtbo \
 		kera-iot-cdp-qca6750-ufs4-overlay.dtbo \
 		kera-cdp-qca6750-ufs4-slt-overlay.dtbo \
+		kera-cdp-emmc-overlay.dtbo \
 		kera-qrd-wcn7750-ufs4-overlay.dtbo \
 		kera-qrd-wcn7750-ufs2-overlay.dtbo \
 		kera-qrd-wcn7750-ufs3-overlay.dtbo \
@@ -100,7 +101,9 @@ KERA_BOARDS += \
 		kera-rcm-qca6750-ufs3-overlay.dtbo \
 		kera-rcm-wcn7750-ufs2-overlay.dtbo \
 		kera-rcm-wcn7750-ufs3-overlay.dtbo \
-		kera-rcm-wcn7750-ufs4-overlay.dtbo
+		kera-rcm-wcn7750-ufs4-overlay.dtbo \
+		kera-idp-emmc-overlay.dtbo \
+		kera-idp-ufs3-overlay.dtbo
 
 NOAPQ_KERA_BOARDS += \
 		kera-rumi-overlay.dtbo
@@ -146,7 +149,7 @@ pineapple-dtb-$(CONFIG_ARCH_PINEAPPLE) += \
 pineapple-overlays-dtb-$(CONFIG_ARCH_PINEAPPLE) += $(PINEAPPLE_BOARDS) $(NOAPQ_PINEAPPLE_BOARDS) $(PINEAPPLE_BASE_DTB) $(PINEAPPLE_APQ_BASE_DTB)
 dtb-y += $(pineapple-dtb-y)
 
-PARROT_BASE_DTB += parrot.dtb parrotp.dtb parrot-sg.dtb parrotp-sg.dtb
+PARROT_BASE_DTB += parrot.dtb parrotp.dtb parrot-sg.dtb parrotp-sg.dtb parrot-lite.dtb
 PARROT_4GB_BASE_DTB += parrot-4gb.dtb
 
 PARROT_BOARDS += \
@@ -185,8 +188,8 @@ parrot-dtb-$(CONFIG_ARCH_PARROT) += \
 parrot-overlays-dtb-$(CONFIG_ARCH_PARROT) += $(PARROT_BOARDS) $(PARROT_BASE_DTB) $(PARROT_4GB_BOARDS) $(PARROT_4GB_BASE_DTB)
 dtb-y += $(parrot-dtb-y)
 
-RAVELIN_BASE_DTB += ravelin.dtb ravelinp.dtb ravelin-sg.dtb ravelinp-sg.dtb
-RAVELIN_4GB_BASE_DTB += ravelin-4gb.dtb ravelinp-4gb.dtb ravelin-sg.dtb ravelinp-sg.dtb
+RAVELIN_BASE_DTB += ravelin.dtb ravelinp.dtb ravelin-sg.dtb ravelinp-sg.dtb montague.dtb montaguep.dtb
+RAVELIN_4GB_BASE_DTB += ravelin-4gb.dtb ravelinp-4gb.dtb ravelin-sg.dtb ravelinp-sg.dtb montague-4gb.dtb montaguep-4gb.dtb
 
 RAVELIN_BOARDS += \
 		 ravelin-rumi-overlay.dtbo \
@@ -194,10 +197,19 @@ RAVELIN_BOARDS += \
 		 ravelin-idp-overlay.dtbo \
 		 ravelin-idp-wcn3950-amoled-rcm-overlay.dtbo \
 		 ravelin-qrd-overlay.dtbo \
+		 montague-rumi-overlay.dtbo \
+		 montague-hsp-overlay.dtbo \
+		 montague-rcm-overlay.dtbo \
+		 montague-wsa-overlay.dtbo \
+		 montague-wsd-overlay.dtbo \
+		 montague-idp-qps615-overlay.dtbo \
+		 montague-adrastea-overlay.dtbo \
+		 montague-apache-overlay.dtbo
 
 RAVELIN_4GB_BOARDS += \
 		 ravelin-idp-wcn3988-4gb-overlay.dtbo \
 		 ravelin-qrd-4gb-overlay.dtbo \
+		 montague-moselle-overlay.dtbo
 
 parrot-dtb-$(CONFIG_ARCH_RAVELIN) += \
 	$(call add-overlays, $(RAVELIN_BOARDS),$(RAVELIN_BASE_DTB)) \
@@ -351,7 +363,9 @@ parrot_tuivm-dtb-$(CONFIG_ARCH_QTI_VM) +=  ravelin-vm-rumi.dtb \
 			ravelin-vm-idp.dtb \
 			ravelin-vm-idp-wcn3988.dtb \
 			ravelin-vm-idp-wcn3950-amoled-rcm.dtb \
-			ravelin-vm-qrd.dtb
+			ravelin-vm-qrd.dtb \
+			montague-vm-hsp.dtb \
+			montague-vm-moselle.dtb
 
 dtb-y += $(parrot_tuivm-dtb-y)
 
