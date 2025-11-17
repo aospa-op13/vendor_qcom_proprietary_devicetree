@@ -48,7 +48,7 @@ sensor_fb: sensor_fb {
                mag_fusion {
                    sensor-type = <6>;//OPLUS_MAG_FUSION
                    is-virtual-sensor;
-                   fusion-type = <0>;//AKM_FUSION
+                   fusion-type = <0>;//OPLUS_FUSION
                    fold-feature = <0>;
                    drop_zero = <1>;
                };

@@ -27,21 +27,17 @@
 };
 
 &soc {
-    //#ifdef OPLUS_FEATURE_THERMAL_HORAE
-    shell_front {
-        compatible = "oplus,shell-temp";
-    };
+        //#ifdef OPLUS_FEATURE_THERMAL_HORAE
+        shell_front {
+                compatible = "oplus,shell-temp";
+        };
 
-    shell_frame {
-        compatible = "oplus,shell-temp";
-    };
+        shell_frame {
+                compatible = "oplus,shell-temp";
+        };
 
-    shell_back {
-        compatible = "oplus,shell-temp";
-    };
-    //#endif /* OPLUS_FEATURE_THERMAL_HORAE */
-};
-
-&adspslpi_mem {
-	reg = <0x0 0x9ee00000 0x0 0x5a80000>;
+        shell_back {
+                compatible = "oplus,shell-temp";
+        };
+        //#endif /* OPLUS_FEATURE_THERMAL_HORAE */
 };
