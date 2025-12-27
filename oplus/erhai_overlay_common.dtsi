@@ -154,6 +154,8 @@
 		ram-8g {
 			oplus_bsp_uxmem_opt {
 				feature-disable;
+				page_pool_order0_mb = <192>;
+				page_pool_order1_mb = <8>;
 			};
 		};
 	};
