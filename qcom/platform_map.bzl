@@ -214,6 +214,10 @@ _platform_map = {
             {"name": "kera-rcm-wcn7750-ufs2-overlay.dtbo"},
             {"name": "kera-rcm-wcn7750-ufs3-overlay.dtbo"},
             {"name": "kera-rcm-wcn7750-ufs4-overlay.dtbo"},
+            {"name": "kera-rcm-wcn7750-emmc-overlay.dtbo"},
+            {"name": "kera-rcm-wcn7750-ufs3-no-display-overlay.dtbo"},
+            {"name": "kera-rcm-wcn7750-ufs4-no-display-overlay.dtbo"},
+            {"name": "kera-rcm-wcn7750-emmc-no-display-overlay.dtbo"},
             {"name": "kera-idp-emmc-overlay.dtbo"},
             {"name": "kera-idp-ufs3-overlay.dtbo"},
         ],
@@ -221,8 +225,21 @@ _platform_map = {
     "kera-le": {
         "dtb_list": [
             {"name": "kera.dtb"},
+            {"name": "kera-iot.dtb"},
             {
                 "name": "kerap.dtb",
+                "apq": True,
+            },
+            {
+                "name": "kerap-iot.dtb",
+                "apq": True,
+            },
+            {
+                "name": "kera-qmb.dtb",
+                "apq": False,
+            },
+            {
+                "name": "kerap-qna.dtb",
                 "apq": True,
             },
         ],
@@ -254,6 +271,10 @@ _platform_map = {
             {"name": "kera-rcm-wcn7750-ufs2-overlay.dtbo"},
             {"name": "kera-rcm-wcn7750-ufs3-overlay.dtbo"},
             {"name": "kera-rcm-wcn7750-ufs4-overlay.dtbo"},
+            {"name": "kera-rcm-wcn7750-emmc-overlay.dtbo"},
+            {"name": "kera-rcm-wcn7750-ufs3-no-display-overlay.dtbo"},
+            {"name": "kera-rcm-wcn7750-ufs4-no-display-overlay.dtbo"},
+            {"name": "kera-rcm-wcn7750-emmc-no-display-overlay.dtbo"},
             {"name": "kera-idp-emmc-overlay.dtbo"},
             {"name": "kera-idp-ufs3-overlay.dtbo"},
         ],
