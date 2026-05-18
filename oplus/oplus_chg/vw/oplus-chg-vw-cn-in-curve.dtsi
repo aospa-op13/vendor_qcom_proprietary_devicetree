@@ -830,7 +830,7 @@
 	oplus_spec,wired-ffc-step-max = <5>;
 	oplus_spec,wired-ffc-fv-mv = <4630 4630 4630 4630 4630>;
 	oplus_spec,wired-ffc-fv-cutoff-mv = <4550 4550 4525
-					4550 4500 4520
+					4550 4550 4520
 					4550 4545 4515
 					4550 4540 4510
 					4540 4535 4510>;
