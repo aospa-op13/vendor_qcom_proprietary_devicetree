@@ -109,7 +109,14 @@ KERA_BOARDS += \
 		kera-rcm-wcn7750-ufs4-no-display-overlay.dtbo \
 		kera-rcm-wcn7750-emmc-no-display-overlay.dtbo \
 		kera-idp-emmc-overlay.dtbo \
-		kera-idp-ufs3-overlay.dtbo
+		kera-idp-ufs3-overlay.dtbo \
+		kera-evk-emmc-overlay.dtbo \
+		kera-evk-emmc-hdmiearc-dmic-overlay.dtbo \
+		kera-evk-emmc-hdmiearc-hat-overlay.dtbo \
+		kera-evk-emmc-lt9611uxd-dmic-overlay.dtbo \
+		kera-evk-emmc-lt9611uxd-hat-overlay.dtbo \
+		kera-evk-emmc-wcd9378-dmic-overlay.dtbo \
+		kera-evk-emmc-wcd9378-hat-overlay.dtbo
 
 NOAPQ_KERA_BOARDS += \
 		kera-rumi-overlay.dtbo
@@ -147,7 +154,14 @@ KERA_BOARDS += \
 		kera-rcm-wcn7750-ufs4-no-display-overlay.dtbo \
 		kera-rcm-wcn7750-emmc-no-display-overlay.dtbo \
 		kera-idp-emmc-overlay.dtbo \
-		kera-idp-ufs3-overlay.dtbo
+		kera-idp-ufs3-overlay.dtbo \
+		kera-evk-emmc-overlay.dtbo \
+		kera-evk-emmc-hdmiearc-dmic-overlay.dtbo \
+		kera-evk-emmc-hdmiearc-hat-overlay.dtbo \
+		kera-evk-emmc-lt9611uxd-dmic-overlay.dtbo \
+		kera-evk-emmc-lt9611uxd-hat-overlay.dtbo \
+		kera-evk-emmc-wcd9378-dmic-overlay.dtbo \
+		kera-evk-emmc-wcd9378-hat-overlay.dtbo
 
 NOAPQ_KERA_BOARDS += \
 		kera-rumi-overlay.dtbo
@@ -234,7 +248,7 @@ parrot-dtb-$(CONFIG_ARCH_PARROT) += \
 parrot-overlays-dtb-$(CONFIG_ARCH_PARROT) += $(PARROT_BOARDS) $(PARROT_BASE_DTB) $(PARROT_4GB_BOARDS) $(PARROT_4GB_BASE_DTB)
 dtb-y += $(parrot-dtb-y)
 
-RAVELIN_BASE_DTB += ravelin.dtb ravelinp.dtb ravelin-sg.dtb ravelinp-sg.dtb montague.dtb montaguep.dtb
+RAVELIN_BASE_DTB += ravelin.dtb ravelinp.dtb ravelin-sg.dtb ravelinp-sg.dtb montague.dtb montaguep.dtb montague-qmb.dtb ravelin-cqm-fp1.dtb ravelin-cqm-fp2.dtb ravelin-cqm-fp3.dtb ravelin-cqs-fp1.dtb ravelin-cqs-fp2.dtb ravelin-cqs-fp3.dtb
 RAVELIN_4GB_BASE_DTB += ravelin-4gb.dtb ravelinp-4gb.dtb ravelin-sg.dtb ravelinp-sg.dtb montague-4gb.dtb montaguep-4gb.dtb
 
 RAVELIN_BOARDS += \

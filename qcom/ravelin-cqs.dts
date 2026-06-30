@@ -3,9 +3,14 @@
  * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
  */
 
-#include "ravelin.dtsi"
+/dts-v1/;
+
+#include "ravelin-cqs.dtsi"
+
 / {
-	model = "Qualcomm Technologies, Inc. RavelinP";
+	model = "Qualcomm Technologies, Inc. ravelin-cqs SoC";
 	compatible = "qcom,ravelinp";
-	qcom,msm-id = <602 0x10000>, <774 0x10000>;
+	qcom,msm-id = <774 0x10000>;
+	qcom,board-id = <0 0>;
 };
+
