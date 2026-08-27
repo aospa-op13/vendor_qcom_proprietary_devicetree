@@ -1098,13 +1098,13 @@
 			<&aggre2_noc MASTER_QUP_2 &mc_virt  SLAVE_EBI1>;
 			pinctrl-names = "default", "active", "sleep", "shutdown";
     		pinctrl-0 = <&qupv3_se15_default_cts>, <&qupv3_se15_default_rts>,
-    			<&qupv3_se15_default_tx>, <&qupv3_se15_default_rx>;
+			<&qupv3_se15_default_tx>, <&qupv3_se15_default_rx>;
     		pinctrl-1 = <&qupv3_se15_cts>, <&qupv3_se15_rts>,
-    			<&qupv3_se15_tx>, <&qupv3_se15_rx>;
+			<&qupv3_se15_tx>, <&qupv3_se15_rx>;
     		pinctrl-2 = <&qupv3_se15_cts>, <&qupv3_se15_rts>,
-    			<&qupv3_se15_tx>, <&qupv3_se15_default_rx>;
+			<&qupv3_se15_tx>, <&qupv3_se15_default_rx>;
     		pinctrl-3 = <&qupv3_se15_default_cts>, <&qupv3_se15_default_rts>,
-    			<&qupv3_se15_default_tx>, <&qupv3_se15_default_rx>;
+			<&qupv3_se15_default_tx>, <&qupv3_se15_default_rx>;
     		qcom,wakeup-byte = <0xFD>;
     		status = "disabled";
 		};

@@ -16,15 +16,15 @@
 		label = "gpio-keys";
 
 		pinctrl-names = "default";
-		pinctrl-0 = <&key_vol_down_default>;
+		pinctrl-0 = <&key_vol_up_default>;
 
-		vol_down {
-			label = "volume_down";
+		vol_up {
+			label = "volume_up";
 			gpios = <&pm8550_gpios 6 GPIO_ACTIVE_LOW>;
 			linux,input-type = <1>;
-			linux,code = <KEY_VOLUMEDOWN>;
+			linux,code = <KEY_VOLUMEUP>;
 			gpio-key,wakeup;
-			debounce-interval = <32>;
+			debounce-interval = <15>;
 			linux,can-disable;
 		};
 	};
