@@ -27,7 +27,7 @@
 
 	qcom,uses_level_shifter;
 
-	status = "disabled";
+	status = "disable";
 };
 
 &wcd_usbss {

@@ -55,8 +55,8 @@
 };
 
 &pm8550_gpios {
-	key_vol_up {
-		key_vol_up_default: key_vol_up_default {
+	key_vol_down {
+		key_vol_down_default: key_vol_down_default {
 			pins = "gpio6";
 			function = "normal";
 			input-enable;
@@ -330,7 +330,7 @@
 	pm8550ve_g_die_temp {
 		reg = <PM8550VX_ADC5_GEN3_DIE_TEMP(6)>;
 		label = "pm8550ve_g_die_temp";
-		qom,pre-scaling = <1 1>;
+		qcom,pre-scaling = <1 1>;
 	};
 
 	pm8550ve_i_die_temp {
