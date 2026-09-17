@@ -6,8 +6,6 @@
 # Combined dtb target is also generated using the fdt_overlay tool.
 # dtb-y += <base>-<board>.dtb
 
-ifneq (,)
-
 add-overlays = $(foreach o,$1,$(foreach b,$2,$(eval $(basename $b)-$(basename $o)-dtbs = $b $o) $(basename $b)-$(basename $o).dtb))
 
 # sun-dtb-y is list of DTBs to install when doing non-overlay build
@@ -44,7 +42,11 @@ SUN_BOARDS += \
 		sun-rcm-overlay.dtbo \
 		sun-rcm-v8-overlay.dtbo \
 		sun-atp-overlay.dtbo \
-		sunp-hdk-overlay.dtbo
+		sunp-hdk-overlay.dtbo \
+		../oplus/dodge-23821-sun-overlay.dtbo \
+		../oplus/dodge-23821-sun-overlay-T0.dtbo \
+		../oplus/dodge-23893-sun-overlay.dtbo \
+		../oplus/dodge-23893-sun-overlay-T0.dtbo
 
 NOAPQ_SUN_BOARDS += \
 		 sun-rumi-overlay.dtbo
@@ -432,8 +434,6 @@ parrot_tuivm-dtb-$(CONFIG_ARCH_QTI_VM) +=  ravelin-vm-rumi.dtb \
 dtb-y += $(parrot_tuivm-dtb-y)
 
 endif
-endif
-
 endif
 
 always-y        := $(dtb-y)
