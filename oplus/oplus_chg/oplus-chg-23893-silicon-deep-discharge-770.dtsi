@@ -1,6 +1,9 @@
 //ifdef OPLUS_FEATURE_CHG_BASIC
 &oplus_mms_gauge {
 	silicon_p_770 {
+		oplus,fcl_support;
+		oplus,fcl_index = <0>;
+		oplus,vb_offset = <0>;
 		deep_spec,support;
 		deep_spec,uv_thr = <2800>;
 		deep_spec,count_thr = <50>;

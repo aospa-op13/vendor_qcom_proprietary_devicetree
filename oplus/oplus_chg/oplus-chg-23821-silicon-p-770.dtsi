@@ -1,16 +1,9 @@
 //ifdef OPLUS_FEATURE_CHG_BASIC
 &oplus_chg_comm {
 	silicon_p_770 {
-		oplus_spec,dec-vol-cc-thr = <0 400 800>;
-		oplus_spec,dec-vol-fv-mv = <0  0  0  0  0  0  0  0  0
-					    20 20 20 20 20 20 20 0  0
-					    40 40 40 40 40 40 20 0  0>;
-		oplus_spec,dec-vol-wired-ffc-mv = <0  0  0
-						   20 20 20
-						   40 40 20>;
-		oplus_spec,dec-vol-wls-ffc-mv = <0  0  0
-						 20 20 20
-						 40 40 20>;
+		oplus_spec,dec_step = <20>;
+		oplus_spec,dec-vol-cc-full-thr = <0 400 600 800 1000 1200>;
+		oplus_spec,dec-vol-fv-full-mv = <0 20 20 40 40 40>;
 		oplus_spec,batt-them-thr = <(-100) 0 50 120 160 350 450 530>;
 		oplus_spec,iterm-ma = <150>;
 		oplus_spec,fv-mv = <4500 4500 4500 4500 4500 4500 4475 4130 4130>;
@@ -33,6 +26,10 @@
 		oplus_spec,ffc-temp-thr = <120 210 350 440>;
 		oplus_spec,wired-ffc-step-max = <2>;
 		oplus_spec,wired-ffc-fv-mv = <4590 4590>;
+		oplus_spec,bdd-vbatdiff-mv = <50>;
+		oplus_spec,bdd-enter-current-ma = <100>;
+		oplus_spec,bdd-enter-voltage-mv = <200>;
+		oplus_spec,bdd-vbatdiff-timeout-min = <10080>;
 
 		oplus_spec,wired-ffc-fv-cutoff-mv = <4550 4525 4490
 						     4520 4505 4475>;
@@ -94,9 +91,12 @@
 		smooth_strategy {
 			oplus_spec,reserve_table_centipercent =
 				/* start(%) end(%) dischg_reserve(0.01%) full_reserve(0.01%) chg_reserve(0.01%) chg_split(%) */
-				<0   20  0   0   200 100>,
-				<21  99  200 0   200 100>,
-				<100 100 200 0   200 100>;
+				<0   20  0   0   (-200) 90>,
+				<21  80  200 0   (-200) 90>,
+				<81  84  200 0   (-100) 90>,
+				<85  99  200 0   200    100>,
+				<100 100 200 0   200    100>;
+			oplus,enable_secondary_smooth_map_update;
 		};
 	};
 };
@@ -170,6 +170,9 @@
 
 &oplus_ufcs_charge {
 	silicon_p_770 {
+		oplus,curr_max_ma_percent = <3500 /* 75% ibus */
+					     2000 /* 85% ibus */>;
+
 		oplus,adsp_ufcs_project;
 		oplus,ufcs_need_reset_adapter;
 		oplus,target_vbus_mv = <11000>;
